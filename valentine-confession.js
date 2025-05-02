@@ -31,7 +31,7 @@ checkbox.addEventListener('change', () => {
         // Bắt đầu tạo sticker
         stickerInterval = setInterval(() => {
             createSticker();
-        }, 200); // Sticker rơi mỗi 300ms
+        }, 150); // Sticker rơi mỗi 300ms
     } else {
         // Dừng và xóa tất cả sticker còn lại
         clearInterval(stickerInterval);
@@ -39,7 +39,7 @@ checkbox.addEventListener('change', () => {
     }
 });
 function getRandomSticker() {
-    const emojis = ['😁', '💖', '✨', '😍', '💌', '🎉', '😻', '💐'];
+    const emojis = ['😁', '💖', '✨', '😍', '💌', '🎉', '😻', '💐', '🎉','😱','🥺','⭐','💥','🔥','💘','👫','👬','👭','🧑‍🤝‍🧑','🌺','☀️','✨','🎀','🎂','🎈' ];
     return emojis[Math.floor(Math.random() * emojis.length)];
 }
 
