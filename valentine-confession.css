@@ -256,7 +256,7 @@ body {
 .gif-square {
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: -50px;
     width: 50px;    /* Kích cỡ vuông */
     height: 50px;
     object-fit: cover;
