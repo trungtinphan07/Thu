@@ -257,7 +257,7 @@ body {
     position: absolute;
     right: 0;
     bottom: 0;
-    width: 1200px;    /* Kích cỡ vuông */
+    width: 120px;    /* Kích cỡ vuông */
     height: 120px;
     object-fit: cover;
     border-radius: 10px;
