@@ -53,6 +53,9 @@ body {
 	animation-iteration-count: infinite;
 	animation-play-state: running;
 }
+.reset-animation {
+	animation: none !important;
+}
 
 
 .message {

@@ -1,15 +1,35 @@
 $("#messageState").on("change", (x) => {
+	const music = document.getElementById("bgMusic");
+
 	$(".message").removeClass("openNor").removeClass("closeNor");
 	if ($("#messageState").is(":checked")) {
 		$(".message").removeClass("closed").removeClass("no-anim").addClass("openNor");
 		$(".heart").removeClass("closeHer").removeClass("openedHer").addClass("openHer");
 		$(".container").stop().animate({"backgroundColor": "#f48fb1"}, 2000);
 		console.log("Abrindo");
+
+		// PHÁT NHẠC
+		if (music) {
+			music.play().catch(err => console.error("Không phát được nhạc:", err));
+		}
+
+
+
 	} else {
 		$(".message").removeClass("no-anim").addClass("closeNor");
 		$(".heart").removeClass("openHer").removeClass("openedHer").addClass("closeHer");
 		$(".container").stop().animate({"backgroundColor": "#fce4ec"}, 2000);
 		console.log("fechando");
+
+		// DỪNG NHẠC
+		if (music) {
+			music.pause();
+			music.currentTime = 0;
+		}
+
+		// DỪNG STICKER
+		clearInterval(stickerInterval);
+		stickerInterval = null;
 	}
 });
 
