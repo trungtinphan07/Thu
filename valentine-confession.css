@@ -16,16 +16,25 @@ body {
 	margin: 0px;
 }
 
-.instruction{
+.instruction {
 	position: absolute;
+	top: 35%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	font-size: 1.6rem;
 	color: rgba(255, 0, 0, 0.554);
 	text-align: center;
-    max-width: 100%;
-	top: 36%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
+	max-width: 90vw; /* Co dãn theo thiết bị */
+	line-height: 1.4em;
+
+	white-space: normal; /* Cho phép xuống dòng nếu cần */
+	word-break: break-word; /* Ngắt từ nếu quá dài */
+  }
+  
+  .instruction .nowrap {
+	white-space: nowrap; /* Dòng này luôn đi cùng nhau */
+  }
+  
 
 .container {
 	position: relative;
